@@ -5,71 +5,71 @@ onLoadName          = "7Cav Invade & Nexhex v1.1";
 onLoadMission       = "7th Cavalry Invade and Nexhex v1.1";
 onLoadIntro         = "7Cav Invade and Nexhex v1.1";
 
-class Header
-{
-	gameType = Coop;
-	minPlayers = 1;
-	maxPlayers = 100;
+disabledAI               = true;
+disableChannels[]        = {{0,false,true},{1,false,true},{2,true,true},{6,true,true}};
+
+cba_settings_hasSettingsFile = 1;
+cba_settings_whitelist[] = {
+    "76561197962051582",    // Brostrom.A
+    "76561198007260563",    // Tharen.R
+    "76561198006952602",    // Rosefield.M
+    "76561198070981528",    // Schmidt.A
+    "76561198044636421"     // Phoenix.G
 };
 
-respawn = "BASE";
-respawnDelay = 5;
+enableTargetDebug = 1;
+enableDebugConsole[] = {
+    "76561197962051582",    // Brostrom.A
+    "76561198007260563",    // Tharen.R
+    "76561198006952602",    // Rosefield.M
+    "76561198070981528",    // Schmidt.A
+    "76561198044636421"     // Phoenix.G
+};
 
-minPlayerDistance = 1000;
+forceRotorLibSimulation  = ;
 
-corpseManagerMode = 1;
-corpseLimit = 40;
-corpseRemovalMinTime = 60;
-corpseRemovalMaxTime = 3600;
+/*     GARBADGE COLLECTIOR    */
 
-wreckManagerMode = 1;
-wreckLimit = 10;
-wreckRemovalMinTime = 60;
-wreckRemovalMaxTime = 3600;
+corpseManagerMode = 3;
+corpseLimit = 10;
+corpseRemovalMinTime = 10;
+corpseRemovalMaxTime = 120;
+minPlayerDistance = 150;
 
-disabledAI = 1;
+/*          RESPAWN           */
 
-disableChannels[] = {
-	{
-		0,		// channel ID
-		false,	// disable text chat
-		true	// disable voice chat
-	},
-	{
-		1,		// channel ID
-		false,	// disable text chat
-		true	// disable voice chat
-	},
-	{
-		2,		// channel ID
-		false,	// disable text chat
-		true	// disable voice chat
-	},
-	{
-		3,		// channel ID
-		false,	// disable text chat
-		false	// disable voice chat
-	},
-	{
-		4,		// channel ID
-		false,	// disable text chat
-		false	// disable voice chat
-	},
-	{
-		5,		// channel ID
-		false,	// disable text chat
-		false	// disable voice chat
-	},
-	{
-		6,		// channel ID
-		false,	// disable text chat
-		true	// disable voice chat
-	},
+// Name a marker "respawn_west" to set spawn.
+// See https://community.bistudio.com/wiki/Arma_3_Respawn for more info on respawn.
+respawn                = BASE;
+respawnDelay           = 4;
+//respawnDelay           = 30000;               // Enable for 1 life operations and disable the other.
+respawnOnStart         = -1;
+respawnTemplatesWest[] = {"MenuPosition"};
+//respawnTemplates[] = {"ace_spectator"};       // Enable for 1 life operations and disable the other.
+
+/*          SYSTEMS           */
+
+class Header {
+    gameType = Coop;
+    minPlayers = 1;
+    maxPlayers = 100;
+};
+
+class Extended_PreInit_EventHandlers {
+    cScripts_preInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\cScripts_preInit.sqf'";
+};
+class Extended_PostInit_EventHandlers {
+    cScripts_postInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\cScripts_postInit.sqf'";
 };
 
 #include "CHVD\dialog.hpp"
 
-class CfgFunctions
-{
-	#include "CHVD\CfgFunctions.hpp"	
+class CfgFunctions {
+    #include "cScripts\CfgFunctions.hpp"
+    #include "CHVD\CfgFunctions.hpp"    
 };
+
+#include "cScripts\CfgLoadouts.hpp"
+#include "ui\SEVCAV_UI.inc"
+
+/*           OTHER            */

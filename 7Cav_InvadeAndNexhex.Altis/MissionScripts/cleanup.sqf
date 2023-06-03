@@ -1,7 +1,7 @@
 while {true} do {	
 	
 	// Clean up any objects on the ground near respawn marker
-	_clear = nearestObjects[(getMarkerPos "respawn_west"),["weaponholder"],300];
+	_clear = nearestObjects[(getMarkerPos "respawn_west"),["weaponholder"],30];
 	for "_i" from 0 to ((count _clear) - 1) do 
 	{
 		deleteVehicle (_clear select _i);
@@ -15,5 +15,5 @@ while {true} do {
 		};
 	} forEach allGroups;
 	
-	sleep 900; // Wait 15 mins
+	sleep 20;
 };

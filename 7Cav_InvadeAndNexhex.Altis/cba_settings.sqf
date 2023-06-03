@@ -200,8 +200,8 @@ force force ace_repair_addSpareParts = true;
 force force ace_repair_autoShutOffEngineWhenStartingRepair = false;
 force force ace_repair_consumeItem_toolKit = 0;
 force force ace_repair_displayTextOnRepair = true;
-force force ace_repair_engineerSetting_fullRepair = 0;
-force force ace_repair_engineerSetting_repair = 0;
+force force ace_repair_engineerSetting_fullRepair = 2;
+force force ace_repair_engineerSetting_repair = 1;
 force force ace_repair_engineerSetting_wheel = 0;
 force force ace_repair_fullRepairLocation = 0;
 force force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
@@ -326,10 +326,10 @@ force force ace_medical_treatment_locationPAK = 0;
 force force ace_medical_treatment_locationsBoostTraining = true;
 force force ace_medical_treatment_locationSurgicalKit = 0;
 force force ace_medical_treatment_maxLitterObjects = 100;
-force force ace_medical_treatment_medicEpinephrine = 0;
-force force ace_medical_treatment_medicIV = 0;
-force force ace_medical_treatment_medicPAK = 0;
-force force ace_medical_treatment_medicSurgicalKit = 0;
+force force ace_medical_treatment_medicEpinephrine = 1;
+force force ace_medical_treatment_medicIV = 1;
+force force ace_medical_treatment_medicPAK = 2;
+force force ace_medical_treatment_medicSurgicalKit = 1;
 force force ace_medical_treatment_timeCoefficientPAK = 0.7;
 force force ace_medical_treatment_treatmentTimeAutoinjector = 5;
 force force ace_medical_treatment_treatmentTimeBodyBag = 10;
@@ -451,7 +451,7 @@ force force ace_quickmount_priority = 3;
 force force ace_quickmount_speed = 5;
 
 // ACE Respawn
-force force ace_respawn_removeDeadBodiesDisconnected = true;
+force force ace_respawn_removeDeadBodiesDisconnected = false;
 force force ace_respawn_savePreDeathGear = false;
 
 // ACE Scopes
