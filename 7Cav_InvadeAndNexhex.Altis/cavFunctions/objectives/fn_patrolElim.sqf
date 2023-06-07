@@ -40,12 +40,20 @@ _taskID = format ["ePatrol_%1",str time];
 
 [true,_taskID,["Eliminate the enemy patrol force.","Eliminate Enemy Patrol",""],ao_marker_location,"ASSIGNED",1,true,"attack",true] call BIS_fnc_taskCreate;
 
+task_list = task_list pushback _taskID;
+
+publicVariable "task_list";
+
 while {!_victoryCondition} do {
 
     if (count units east > 0) then {_victoryCondition = false;} else {_victoryCondition = true;};
     sleep 5;
 
 };
+
+task_list = task_list - _taskID;
+
+publicVariable "task_list";
 
 [_taskID,"SUCCEEDED",true] call BIS_fnc_taskSetState;
 

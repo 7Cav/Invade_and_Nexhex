@@ -28,5 +28,7 @@ setDate [2020, 6, 26, floor(random 24), 00];
 [] execVM "MissionScripts\cleanup.sqf";
 [] execVM "MissionScripts\fogKiller.sqf";
 
+task_list = [];
+
 waitUntil {!isNil "ao_x_size" && !isNil "ao_y_size"};
 [ao_x_size,ao_y_size] spawn cav_fnc_createAO;

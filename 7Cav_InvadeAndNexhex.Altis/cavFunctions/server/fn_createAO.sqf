@@ -30,7 +30,7 @@ while {_result} do {
     sleep 1;
 };
 
-createMarkerLocal ["ao_marker",ao_marker_location];
+_marker = createMarkerLocal ["ao_marker",ao_marker_location];
 "ao_marker" setMarkerShapeLocal "RECTANGLE";
 "ao_marker" setMarkerSizeLocal [_xCoord,_yCoord];
 "ao_marker" setMarkerColorLocal "colorOPFOR";

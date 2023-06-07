@@ -41,5 +41,10 @@ enableRadio false;
 #include "cav_configuration.sqf";
 
 if !(isDedicated) then {
-[] call cav_fnc_addActions;
+    
+    [] call cav_fnc_addActions;
+
+
+    if (isNil "task_list") then {systemChat "AO List not found.";} else {systemChat "AO Initialized";};
+
 };
