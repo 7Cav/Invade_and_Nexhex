@@ -58,6 +58,7 @@ class SEVCAV_vehicle_spawner {
         h = 0.033 * safezoneH;
         colorBackground[] = {0,0,0,1};
         colorActive[] = {0.5,0.5,0.5,1};
+        action = "closeDialog 0;"
     };
     class V_vehtyp_selector: vRscCombo
     {
@@ -113,7 +114,7 @@ class SEVCAV_vehicle_spawner {
     class V_cav_logo: vRscPicture
     {
         idc = 1200;
-        text = "#(argb,8,8,3)color(1,1,1,1)";
+        text = "res\logo.paa";
         x = 0.4175 * safezoneW + safezoneX;
         y = 0.269 * safezoneH + safezoneY;
         w = 0.165 * safezoneW;
@@ -122,7 +123,7 @@ class SEVCAV_vehicle_spawner {
     class V_ground_count_text: vRscText
     {
         idc = 1007;
-        text = "Spawned Ground Vehicles"; //--- ToDo: Localize;
+        text = "Ground Vehicles"; //--- ToDo: Localize;
         x = 0.561875 * safezoneW + safezoneX;
         y = 0.445 * safezoneH + safezoneY;
         w = 0.103125 * safezoneW;
@@ -132,7 +133,7 @@ class SEVCAV_vehicle_spawner {
     {
         idc = 1009;
         text = "0 of 10"; //--- ToDo: Localize;
-        x = 0.597969 * safezoneW + safezoneX;
+        x = 0.561875 * safezoneW + safezoneX;
         y = 0.467 * safezoneH + safezoneY;
         w = 0.103125 * safezoneW;
         h = 0.022 * safezoneH;
@@ -140,7 +141,7 @@ class SEVCAV_vehicle_spawner {
     class V_rotary_count_text: vRscText
     {
         idc = 1010;
-        text = "Spawned Rotary Vehicles"; //--- ToDo: Localize;
+        text = "Rotary Vehicles"; //--- ToDo: Localize;
         x = 0.561875 * safezoneW + safezoneX;
         y = 0.511 * safezoneH + safezoneY;
         w = 0.103125 * safezoneW;
@@ -150,7 +151,7 @@ class SEVCAV_vehicle_spawner {
     {
         idc = 1011;
         text = "0 of 6"; //--- ToDo: Localize;
-        x = 0.597969 * safezoneW + safezoneX;
+        x = 0.561875 * safezoneW + safezoneX;
         y = 0.533 * safezoneH + safezoneY;
         w = 0.103125 * safezoneW;
         h = 0.022 * safezoneH;
@@ -159,7 +160,7 @@ class SEVCAV_vehicle_spawner {
     {
         idc = 1012;
         text = "0 of 4"; //--- ToDo: Localize;
-        x = 0.597969 * safezoneW + safezoneX;
+        x = 0.561875 * safezoneW + safezoneX;
         y = 0.599 * safezoneH + safezoneY;
         w = 0.103125 * safezoneW;
         h = 0.022 * safezoneH;
@@ -167,7 +168,7 @@ class SEVCAV_vehicle_spawner {
     class V_fixed_count_text: vRscText
     {
         idc = 1013;
-        text = "Spawned Fixed Wing Vehicles"; //--- ToDo: Localize;
+        text = "Fixed Wing Vehicles"; //--- ToDo: Localize;
         x = 0.561875 * safezoneW + safezoneX;
         y = 0.577 * safezoneH + safezoneY;
         w = 0.103125 * safezoneW;

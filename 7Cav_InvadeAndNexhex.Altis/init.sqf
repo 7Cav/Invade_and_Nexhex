@@ -37,8 +37,9 @@ ACE_maxWeightDrag = 10000;
 enableRadio false;
 0 fadeRadio 0;
 
-#include "presets\preset_init.sqf"
+#include "presets\preset_init.sqf";
+#include "cav_configuration.sqf";
 
 if !(isDedicated) then {
-[] call compileFinal preprocessFileLineNumbers "cavFunctions\player\fn_addActions.sqf";
+[] call cav_fnc_addActions;
 };

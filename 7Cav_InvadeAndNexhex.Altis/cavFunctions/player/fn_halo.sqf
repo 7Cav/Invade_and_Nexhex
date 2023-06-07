@@ -6,14 +6,18 @@
         Executes a halo jump for the player using default Bohemia funciton via a GUI. GUI borrowed from KP Liberation.
 
     Parameter(s):
-        _unit - The player calling to execute a halo jump [OBJECT]
+        _unit [OBJECT] : The player calling to execute a halo jump
 
     Returns:
         Nothing
+
+    Example:
+    [_unit] call cav_fnc_halo;
+    
 */
 
-
 params ["_unit"];
+
 _cooldown = 300;
 _haloAlt = 2500;
 _markers_reset = [99999,99999,0];
@@ -66,4 +70,3 @@ if ( dojump > 0 ) then {
     [1, "BLACK", 2, 0] spawn BIS_fnc_fadeEffect;
    // deleteMarkerLocal the_spawn_marker;
 };
-

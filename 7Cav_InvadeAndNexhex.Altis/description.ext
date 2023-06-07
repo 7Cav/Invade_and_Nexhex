@@ -1,9 +1,9 @@
-dev                 = "AR Moraru.R";
-author              = "AR Moraru.R";
+dev                 = "7th Cav Dev Team";
+author              = "7th Cav Dev Team";
 
-onLoadName          = "7Cav Invade & Nexhex v1.1";
-onLoadMission       = "7th Cavalry Invade and Nexhex v1.1";
-onLoadIntro         = "7Cav Invade and Nexhex v1.1";
+onLoadName          = "7Cav Invade & Nexhex";
+onLoadMission       = "7th Cavalry Invade and Nexhex";
+onLoadIntro         = "7Cav Invade and Nexhex";
 
 disabledAI               = true;
 disableChannels[]        = {{0,false,true},{1,false,true},{2,true,true},{6,true,true}};
@@ -66,7 +66,8 @@ class Extended_PostInit_EventHandlers {
 
 class CfgFunctions {
     #include "cScripts\CfgFunctions.hpp"
-    #include "CHVD\CfgFunctions.hpp"    
+    #include "CHVD\CfgFunctions.hpp"
+    #include "CfgFunctions.hpp"   
 };
 
 #include "cScripts\CfgLoadouts.hpp"

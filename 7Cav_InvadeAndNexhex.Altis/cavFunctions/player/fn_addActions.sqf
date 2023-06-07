@@ -10,20 +10,31 @@
 
     Returns:
         Nothing
+
+    Example:
+    [] call cav_fnc_addActions;
+    
 */
 
-
-base_crate addAction ["PARACHUTE SELF-INSERT",
-                    "cavFunctions\player\fn_halo.sqf", 
-                    nil,
-                    1.5,
-                    true,
-                    true,
-                    "",                 
-                    "(missionNamespace getVariable [""DeployedSector"",""""] != """") && (missionNamespace getVariable [""NoAirTransportAvailable"", true])"];
+base_crate addAction [
+    "PARACHUTE SELF-INSERT",
+    {[_this select 1] call cav_fnc_halo;}, 
+    nil,
+    1.5,
+    true,
+    true,
+    "",                 
+    "((_target distance _this) <= 10)" 
+];
 
 base_crate addAction [
     "Vehicle Spawner",
-    "ui\SEVCAV_vehicle_spawner\fn_createSpawner.sqf"
+    {[_this select 1] call cav_fnc_createSpawner;}, 
+    nil,
+    1.4,
+    true,
+    true,
+    "",                 
+    "((_target distance _this) <= 10)"
 ];
 
